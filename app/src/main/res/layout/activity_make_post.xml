@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".VoiceProcess.MakePost">
+
+        <ImageView
+            android:id="@+id/send_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:src="@drawable/picture2" />
+
+        <ProgressBar
+            android:id="@+id/send_wait_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/send_thumbnail"
+            android:layout_alignLeft="@+id/send_thumbnail"
+            android:layout_alignRight="@+id/send_thumbnail"
+            android:layout_alignTop="@+id/send_thumbnail" />
+
+        <ProgressBar
+            android:id="@+id/send_progress"
+            style="@android:style/Widget.Material.ProgressBar.Horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/send_thumbnail"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/send_thumbnail"
+            android:indeterminate="true" />
+
+        <View
+            android:id="@+id/send_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/send_wait_progress"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/send_caption_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/send_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/caption" />
+
+        <EditText
+            android:id="@+id/send_caption_ed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/send_caption_img"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/send_caption_img"
+            android:hint="Write a Caption..."
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+
+        <ImageView
+            android:id="@+id/send_title_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/send_caption_ed"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/nopic" />
+
+        <EditText
+            android:id="@+id/send_title_ed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/send_title_img"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/send_caption_img"
+            android:hint="Artist"
+            android:maxLength="30"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/send_postBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/send_title_ed"
+            android:layout_margin="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="share post on musigram"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</ScrollView>

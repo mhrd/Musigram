@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    android:padding="8dp">
+
+    <android.mehrdad.musigram.ImageProcess.CircleImage
+        android:id="@+id/cthumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/cperson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cthumbnail"
+        android:layout_toRightOf="@+id/cthumbnail"
+        android:text="/@amirStrange"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cperson"
+        android:layout_toRightOf="@+id/cperson"
+        android:text=" left a comment on your post "
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/cpost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cperson"
+        android:layout_toRightOf="@+id/cthumbnail"
+        android:text=" amad bahare janha " />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cpost"
+        android:layout_below="@+id/cperson"
+        android:layout_toRightOf="@+id/cpost"
+        android:text=":"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/ctime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccomment"
+        android:layout_toRightOf="@+id/cthumbnail"
+        android:text="5d" />
+
+    <TextView
+        android:id="@+id/ccomment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cpost"
+        android:layout_toRightOf="@+id/cthumbnail"
+        android:text="thats good!"
+        android:textColor="@android:color/black" />
+</RelativeLayout>

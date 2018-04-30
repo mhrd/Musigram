@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="4dp"
+        app:contentPadding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <android.mehrdad.musigram.ImageProcess.CircleImage
+                android:id="@+id/user_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/user_image"
+                android:lines="1"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/user_name"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/user_image"
+                android:lines="1"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_title"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/user_image" />
+
+            <ProgressBar
+                android:id="@+id/user_progress"
+                style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="6dp"
+                android:layout_below="@+id/user_description"
+                android:layout_marginTop="5dp" />
+
+
+            <com.like.LikeButton
+                android:id="@+id/user_like_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_progress"
+                app:circle_end_color="@color/colorPrimary"
+                app:icon_size="25dp"
+                app:like_drawable="@drawable/like1"
+                app:unlike_drawable="@drawable/like" />
+
+            <ImageView
+                android:id="@+id/user_comment_button"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/user_progress"
+                android:layout_marginTop="24dp"
+                android:layout_toRightOf="@+id/user_like_button"
+                android:src="@drawable/chat" />
+
+            <TextView
+                android:id="@+id/user_likecomments_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/user_progress"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/user_comment_button"
+                android:gravity="right"
+                android:lines="1"
+                android:text="Likes 0  comments 0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

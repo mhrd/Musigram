@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    android:padding="8dp">
+
+    <android.mehrdad.musigram.ImageProcess.CircleImage
+        android:id="@+id/mthumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/mperson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mthumbnail"
+        android:layout_toRightOf="@+id/mthumbnail"
+        android:text="/@hamid"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mperson"
+        android:layout_toRightOf="@+id/mperson"
+        android:text=" mentioned you in :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/mcomment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mperson"
+        android:layout_toRightOf="@+id/mthumbnail"
+        android:text="your good @mhrd bro!" />
+
+    <TextView
+        android:id="@+id/mtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="4m" />
+
+</RelativeLayout>

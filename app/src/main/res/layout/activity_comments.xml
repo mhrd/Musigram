@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPages.Comments_Page">
+
+    <RelativeLayout
+        android:id="@+id/sending_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:theme="@style/Base.ThemeOverlay.AppCompat">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/list_divider" />
+
+        <Button
+            android:id="@+id/comment_send"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:text="Post"
+            android:textColor="@color/btnDisabled" />
+
+        <ImageView
+            android:id="@+id/comment_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/picture2" />
+
+        <EditText
+            android:id="@+id/comment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/comment_send"
+            android:layout_toRightOf="@+id/comment_pic"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="Add a comment..."
+            android:imeOptions="actionSend"
+            android:singleLine="true"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/comment_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sending_Layout"
+        android:layout_alignParentTop="true"
+        android:divider="@color/list_divider"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@drawable/list_row_selector" />
+</RelativeLayout>

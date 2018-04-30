@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- program main colors -->
+    <color name="colorPrimary">#8d0000</color>
+    <color name="colorPrimaryDark">#560000</color>
+    <color name="colorAccent">#700033</color>
+    <!-- night mode -->
+    <color name="mainBg">#282e33</color>
+    <color name="itemBg">#3a4047</color>
+    <!-- profile page -->
+    <color name="profile_button_select">#d9d9d9</color>
+    <color name="profile_button">#cacaca</color>
+    <!-- likes list -->
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <color name="list_divider">#d9d9d9</color>
+    <color name="list_row_color">#ffffff</color>
+    <color name="list_row_hover_color">#0d486e</color>
+    <!-- follow button -->
+    <color name="follow">#3896f0</color>
+    <color name="follow_select">#91bfeb</color>
+
+    <!--search page-->
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+
+    <!--Comment page-->
+    <color name="btnDisabled">#c8acac</color>
+
+    <!--gradient-->
+    <!--<color name="color1">#8d0000</color>-->
+    <!--<color name="color2">#00028d</color>-->
+    <!--<color name="color3">#008d55</color>-->
+    <!--<color name="color4">#868d00</color>-->
+    <!--<color name="color5">#8d0047</color>-->
+    <!--<color name="color6">#6e008d</color>-->
+    <!--<color name="color7">#00788d</color>-->
+    <!--<color name="color8">#8d0063</color> -->
+    <!---->
+    <color name="color1">#ffffff</color>
+    <color name="color2">#550001</color>
+    <color name="color4">#ffffff</color>
+    <color name="color6">#ffffff</color>
+    <color name="color7">#550001</color>
+    <color name="color8">#ffffff</color>
+
+</resources>
