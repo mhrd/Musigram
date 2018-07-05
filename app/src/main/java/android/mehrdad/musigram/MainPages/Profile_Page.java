@@ -176,7 +176,6 @@ public class Profile_Page extends Fragment {
         StringBuilder stringBuilder = new StringBuilder();
         String line;
         BufferedReader in = null;
-
         try {
             in = new BufferedReader(new FileReader(new File(filePath)));
             while ((line = in.readLine()) != null) stringBuilder.append(line);
