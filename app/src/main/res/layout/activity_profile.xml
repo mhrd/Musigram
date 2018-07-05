@@ -11,18 +11,38 @@
         android:orientation="vertical"
         tools:context="android.mehrdad.musigram.MainPages.Profile_Page">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_profile"
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize"
+                app:layout_collapseMode="pin"
+                app:title="-"
+                app:titleTextColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            </android.support.v7.widget.Toolbar>
+
+
+        </LinearLayout>
+
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:padding="15dp">
 
-            <ImageView
+            <android.mehrdad.musigram.ImageProcess.CircleImage
                 android:id="@+id/profile_image"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:src="@drawable/picture1" />
+                android:src="@drawable/default_profile" />
 
             <ImageView
                 android:layout_width="22dp"
@@ -65,7 +85,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="181"
+                        android:text="-"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/black"
                         android:textStyle="bold" />
@@ -90,7 +110,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="294"
+                        android:text="-"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/black"
                         android:textStyle="bold" />
@@ -115,7 +135,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="248"
+                        android:text="-"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textColor="@android:color/black"
                         android:textStyle="bold" />
@@ -139,7 +159,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/profile_image"
                 android:background="@drawable/profile_button"
-                android:text="Edit Profile"
+                android:text="Waiting..."
                 android:textAllCaps="false" />
         </RelativeLayout>
 

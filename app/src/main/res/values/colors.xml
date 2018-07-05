@@ -38,10 +38,10 @@
     <!--<color name="color8">#8d0063</color> -->
     <!---->
     <color name="color1">#ffffff</color>
-    <color name="color2">#550001</color>
+    <color name="color2">#6f12cb</color>
     <color name="color4">#ffffff</color>
-    <color name="color6">#ffffff</color>
-    <color name="color7">#550001</color>
-    <color name="color8">#ffffff</color>
+    <color name="color6">#e97901</color>
+    <color name="color7">#200fa2</color>
+    <color name="color8">#9b0002</color>
 
 </resources>

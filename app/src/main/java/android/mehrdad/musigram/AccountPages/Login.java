@@ -33,6 +33,11 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -98,9 +103,16 @@ public class Login extends AppCompatActivity {
                     checkLogin(email, password);
                 } else {
                     // Prompt user to enter credentials
-                    Toast.makeText(getApplicationContext(),
-                            "Please enter the credentials!", Toast.LENGTH_SHORT)
-                            .show();
+//                    Toast.makeText(getApplicationContext(),
+//                            "Please enter the credentials!", Toast.LENGTH_SHORT)
+//                            .show();
+                    if (email.isEmpty()) {
+                        username.setError("Please Enter your username");
+                    }
+                    if (password.isEmpty()) {
+                        pass.setError("Please Enter your password");
+                    }
+
                 }
 //                Thread t = new Thread(new Runnable() {
 //                    @Override
@@ -160,7 +172,7 @@ public class Login extends AppCompatActivity {
                     if (code == 400) {
                         // user successfully logged in
                         // Create login session
-                        session.setLogin(true);
+
 
                         // Now store the user in SQLite
                     /*    String uid = jObj.getString("uid");
@@ -171,11 +183,8 @@ public class Login extends AppCompatActivity {
                         // Inserting row in users table
 //                        db.addUser(name, email, uid, created_at);
 */
-                        // Launch main activity
-                        Intent intent = new Intent(Login.this,
-                                MainActivity.class);
-                        startActivity(intent);
-                        finish();
+
+                        tran(username, password);
                     } else {
                         // Error in login. Get the error message
                         String errorMsg = jObj.getString("error_msg");
@@ -216,6 +225,12 @@ public class Login extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
+    void tt(String str) {
+        Toast.makeText(getApplicationContext(),
+                str, Toast.LENGTH_SHORT)
+                .show();
+    }
+
     private void showDialog() {
         if (!pDialog.isShowing())
             pDialog.show();
@@ -230,5 +245,40 @@ public class Login extends AppCompatActivity {
     protected void onDestroy() {
         gradientBackgroundPainter.stop();
         super.onDestroy();
+    }
+
+    void tran(String u, String p) {
+        String temp = u + "@" + p;
+        SaveMe(temp);
+        // Launch main activity
+        session.setLogin(true);
+        Intent intent = new Intent(Login.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+
+    }
+
+    void SaveMe(String user) {
+
+        File root = getFilesDir();
+        File dir = new File(root.getAbsolutePath() + "/.mg");
+        dir.mkdirs();
+        File file = new File(dir, "data.txt");
+
+        try {
+            FileOutputStream f = new FileOutputStream(file);
+            PrintWriter pw = new PrintWriter(f);
+            pw.println(user);
+            pw.flush();
+            pw.close();
+            f.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            //tt(e.getMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
+            //tt(e.getMessage());
+        }
+
     }
 }
